@@ -1,0 +1,27 @@
+.summary{
+    background-color: rgb(121, 245, 224) ;
+    padding: 20px;
+}
+.myInfo{
+    display: flex;
+}
+.myInfo img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.myText{
+    margin-left: 10px;
+    line-height: 50%;
+}
+.btn{
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(247, 0, 255);
+    margin: 5px;
+}
+.btn:focus {
+    background-color: rgb(26, 252, 6);
+}
