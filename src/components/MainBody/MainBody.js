@@ -5,12 +5,19 @@ import './MainBody.css'
 
 const MainBody = ({swims}) => {
 
-    console.log(swims)
-    
+
     return (
         <div className='MainBody'>
             <Header></Header>
-            <Swims swims={swims} ></Swims>
+            <div>
+                {
+                    swims.map(swim =><Swims
+                        key={swim.id}
+                        swim={swim}
+                    ></Swims> )
+                }
+            </div>
+            
         </div>
     );
 };
