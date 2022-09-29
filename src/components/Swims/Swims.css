@@ -21,3 +21,16 @@
 .info{
     margin: 8px;
 }
+
+@media screen and (max-width: 662px) {
+    .swims{
+        width: 90vw;  
+    }
+    .swims img{
+        width: 90vw;
+    }
+    .swims button{
+        width: 90vw;
+        
+    }
+  }

@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import MainBody from './components/MainBody/MainBody';
 import Summary from './components/Summary/Summary';
@@ -13,10 +13,14 @@ function App() {
     .then(res => res.json())
     .then(data => setSwims(data) )
   },[])
+
+  const handleAddToList = (time) =>{
+    console.log(time)
+  }
   
   return (
     <div className='allBody'>
-      <MainBody swims={swims} ></MainBody>
+      <MainBody swims={swims} handleAddToList={handleAddToList} ></MainBody>
       <Summary></Summary>
       
     </div>

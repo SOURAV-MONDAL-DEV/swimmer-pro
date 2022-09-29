@@ -3,8 +3,7 @@ import Header from '../Header/Header';
 import Swims from '../Swims/Swims';
 import './MainBody.css'
 
-const MainBody = ({swims}) => {
-
+const MainBody = ({swims , handleAddToList}) => {
 
     return (
         <div className='MainBody'>
@@ -14,6 +13,7 @@ const MainBody = ({swims}) => {
                     swims.map(swim =><Swims
                         key={swim.id}
                         swim={swim}
+                        handleAddToList={handleAddToList}
                     ></Swims> )
                 }
             </div>

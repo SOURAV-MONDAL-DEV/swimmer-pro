@@ -41,3 +41,26 @@
   display: grid;
   grid-template-columns: 5fr 2fr;
 }
+
+@media screen and (max-width: 1176px) {
+  .allBody{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+  
+}
+@media screen and (max-width: 992px) {
+  .allBody{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+}
+
+@media screen and (max-width: 662px) {
+  .allBody{
+    display:flex ;
+    flex-direction: column;
+  }
+  
+}

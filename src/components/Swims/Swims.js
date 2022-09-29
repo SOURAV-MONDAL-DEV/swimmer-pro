@@ -2,6 +2,7 @@ import React from 'react';
 import './Swims.css'
 
 const Swims = (props) => {
+ const handleAddToList = props.handleAddToList
  const {id, title, image, age, time} = props.swim;
 
     return (
@@ -12,7 +13,7 @@ const Swims = (props) => {
             <h5>For Age: {age} years</h5>
             <h5>Time requared: {time} Minute</h5>
            </div>
-           <button>Add to list</button>
+           <button onClick={()=> handleAddToList(time)} >Add to list</button>
         </div>
     );
 };
