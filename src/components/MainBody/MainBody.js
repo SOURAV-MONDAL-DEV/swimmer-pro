@@ -3,12 +3,14 @@ import Header from '../Header/Header';
 import Swims from '../Swims/Swims';
 import './MainBody.css'
 
-const MainBody = () => {
+const MainBody = ({swims}) => {
+
+    console.log(swims)
     
     return (
         <div className='MainBody'>
             <Header></Header>
-            <Swims></Swims>
+            <Swims swims={swims} ></Swims>
         </div>
     );
 };

@@ -16,7 +16,7 @@ function App() {
   
   return (
     <div className='allBody'>
-      <MainBody  ></MainBody>
+      <MainBody swims={swims} ></MainBody>
       <Summary></Summary>
       
     </div>
