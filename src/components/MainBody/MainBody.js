@@ -9,7 +9,7 @@ const MainBody = ({swims}) => {
     return (
         <div className='MainBody'>
             <Header></Header>
-            <div>
+            <div className='swims-container'>
                 {
                     swims.map(swim =><Swims
                         key={swim.id}
