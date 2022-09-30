@@ -1,8 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Summary.css'
 
 const Summary = ({sumTime}) => {
-    const [Break, setBreak] = useState([])
+    const [Break, setBreak] = useState(0)
+
+    const addBreak = b => {
+        setBreak(b);
+        localStorage.setItem('break', b)
+    }
+
+    useEffect(()=>{
+        const LStime = localStorage.getItem('break');
+        setBreak(LStime)
+    },[])
 
     return (
         <div className='summary'>
@@ -17,14 +27,13 @@ const Summary = ({sumTime}) => {
                 <p>Weight: <strong>57</strong>KG</p>
                 <p>Hight: <strong>5'5"</strong></p>
                 <p>Age: <strong>21</strong>Years</p>
-
             </div>
             <h3>Add A Break</h3>
             <div className='btns sumInfo'>
-                <button onClick={()=>setBreak(5)} className='btn'><span>5</span>Min</button>
-                <button onClick={()=>setBreak(10)} className='btn'><span>10</span>Min</button>
-                <button onClick={()=>setBreak(15)} className='btn'><span>15</span>Min</button>
-                <button onClick={()=>setBreak(20)} className='btn'><span>20</span>Min</button>
+                <button onClick={()=>addBreak(5)} className='btn'><span>5</span>Min</button>
+                <button onClick={()=>addBreak(10)} className='btn'><span>10</span>Min</button>
+                <button onClick={()=>addBreak(15)} className='btn'><span>15</span>Min</button>
+                <button onClick={()=>addBreak(20)} className='btn'><span>20</span>Min</button>
             </div>
             <h3>Exercise Details</h3>
             <div className='sumInfo'>

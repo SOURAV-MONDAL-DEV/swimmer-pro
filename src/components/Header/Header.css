@@ -8,3 +8,8 @@
 .image{
     width: 80px;
 }
+
+.header h1{
+    color: rgb(0, 162, 255);
+    padding-left: 8px;
+}
