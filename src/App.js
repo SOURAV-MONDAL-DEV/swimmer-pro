@@ -11,6 +11,25 @@ function App() {
   const [sumTime, setSumTime] = useState(0)
 
 
+  const loadDataFromLS = () =>{
+    const LStime = localStorage.getItem('localTime');
+    if(LStime){
+    
+      setSumTime(parseInt(LStime))
+    }
+    else{
+      return
+    }
+  }
+
+const setDataToLS = time =>{
+  localStorage.setItem('localTime', (sumTime+time))
+}
+
+useEffect(()=>{
+  loadDataFromLS()
+},[])
+
   useEffect( () => {
     fetch('data.json')
     .then(res => res.json())
@@ -18,10 +37,13 @@ function App() {
   },[])
    
   const handleAddToList = (time) =>{
-    setSumTime(time+ sumTime)
+    setSumTime(time+ sumTime);
+    setDataToLS(time);
     // console.log(sumTime)
-    
-  }
+  } 
+
+
+
   
   return (
     <div>

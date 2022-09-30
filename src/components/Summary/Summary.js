@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './Summary.css'
 
 const Summary = ({sumTime}) => {
-    console.log(sumTime)
     const [Break, setBreak] = useState([])
 
     return (
@@ -29,10 +28,10 @@ const Summary = ({sumTime}) => {
             </div>
             <h3>Exercise Details</h3>
             <div className='sumInfo'>
-                <p><strong>Exercise time: </strong><span>{sumTime} seconds</span></p>
+                <p><strong>Exercise time: </strong><span>{sumTime} Minutes</span></p>
             </div>
             <div className='sumInfo'>
-                <p><strong>Break time: </strong><span>{Break} minutes</span></p>
+                <p><strong>Break time: </strong><span>{Break} Minutes</span></p>
             </div>
 
             <div className='btndiv' ><button className='btnCompleate' >Activity Complete</button></div>
