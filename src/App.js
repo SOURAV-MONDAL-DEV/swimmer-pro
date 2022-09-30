@@ -7,21 +7,25 @@ import { useEffect, useState } from 'react';
 function App() {
 
   const [swims, setSwims ] = useState([]);
+  const [sumTime, setSumTime] = useState(0)
+
 
   useEffect( () => {
     fetch('data.json')
     .then(res => res.json())
     .then(data => setSwims(data) )
   },[])
-
+   
   const handleAddToList = (time) =>{
-    console.log(time)
+    setSumTime(time+ sumTime)
+    // console.log(sumTime)
+    
   }
   
   return (
     <div className='allBody'>
       <MainBody swims={swims} handleAddToList={handleAddToList} ></MainBody>
-      <Summary></Summary>
+      <Summary sumTime={sumTime} ></Summary>
       
     </div>
   );

@@ -12,14 +12,15 @@
 }
 .myText{
     margin-left: 10px;
-    line-height: 50%;
+    line-height: 80%;
 }
 .btn{
+    color: white;
     height: 50px;
     width: 50px;
     border: none;
     border-radius: 50%;
-    background-color: rgb(0, 247, 255);
+    background-color: rgb(0, 183, 255);
     margin: 5px;
 }
 .btn:focus {

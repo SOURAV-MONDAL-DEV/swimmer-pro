@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Summary.css'
 
-const Summary = () => {
+const Summary = ({sumTime}) => {
+    console.log(sumTime)
     const [Break, setBreak] = useState([])
 
     return (
@@ -28,7 +29,7 @@ const Summary = () => {
             </div>
             <h3>Exercise Details</h3>
             <div className='sumInfo'>
-                <p><strong>Exercise time: </strong><span>200 seconds</span></p>
+                <p><strong>Exercise time: </strong><span>{sumTime} seconds</span></p>
             </div>
             <div className='sumInfo'>
                 <p><strong>Break time: </strong><span>{Break} minutes</span></p>
