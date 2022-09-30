@@ -3,6 +3,7 @@ import './App.css';
 import MainBody from './components/MainBody/MainBody';
 import Summary from './components/Summary/Summary';
 import { useEffect, useState } from 'react';
+import Faq from './components/Faq/Faq';
 
 function App() {
 
@@ -23,10 +24,12 @@ function App() {
   }
   
   return (
-    <div className='allBody'>
-      <MainBody swims={swims} handleAddToList={handleAddToList} ></MainBody>
-      <Summary sumTime={sumTime} ></Summary>
-      
+    <div>
+      <div className='allBody'>
+        <MainBody swims={swims} handleAddToList={handleAddToList} ></MainBody>
+        <Summary sumTime={sumTime} ></Summary>
+      </div>
+      <Faq></Faq>
     </div>
   );
 }

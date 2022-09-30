@@ -34,6 +34,8 @@ const Summary = ({sumTime}) => {
             <div className='sumInfo'>
                 <p><strong>Break time: </strong><span>{Break} minutes</span></p>
             </div>
+
+            <div className='btndiv' ><button className='btnCompleate' >Activity Complete</button></div>
             
         </div>
     );

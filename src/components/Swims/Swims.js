@@ -13,7 +13,7 @@ const Swims = (props) => {
             <h5>For Age: {age} years</h5>
             <h5>Time requared: {time} Minute</h5>
            </div>
-           <button onClick={()=> handleAddToList(time)} >Add to list</button>
+           <button className='atlBtn' onClick={()=> handleAddToList(time)} >Add to list</button>
         </div>
     );
 };
