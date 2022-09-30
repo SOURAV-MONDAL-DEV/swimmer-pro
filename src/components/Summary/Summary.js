@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './Summary.css'
 
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
+
+
 const Summary = ({sumTime}) => {
     const [Break, setBreak] = useState(0)
 
@@ -13,6 +18,19 @@ const Summary = ({sumTime}) => {
         const LStime = localStorage.getItem('break');
         setBreak(LStime)
     },[])
+
+
+    const notify =()=>{
+        toast.success('Congtats! You are a SWIMMER', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
+    }
 
     return (
         <div className='summary'>
@@ -43,7 +61,8 @@ const Summary = ({sumTime}) => {
                 <p><strong>Break time: </strong><span>{Break} Minutes</span></p>
             </div>
 
-            <div className='btndiv' ><button className='btnCompleate' >Activity Complete</button></div>
+            <div className='btndiv' ><button onClick={notify} className='btnCompleate' >Activity Complete</button></div>
+            <ToastContainer/>
             
         </div>
     );
